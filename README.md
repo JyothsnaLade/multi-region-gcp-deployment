@@ -1,4 +1,4 @@
-# multi-region-gcp-deployment
+# Multi-region-gcp-deployment
 Production-grade multi-region microservice deployment on GCP with Terraform, blue-green deployments, and monitoring
 
 ## Architecture
@@ -101,24 +101,13 @@ go run main.go
 # Test locally
 curl http://localhost:8080/health
 ```
-
-## Cleanup
-```bash
-cd terraform
-terraform destroy \
-  -var="project_id=${GCP_PROJECT_ID}" \
-  -var="image=us-central1-docker.pkg.dev/${GCP_PROJECT_ID}/multi-region-demo-repo/multi-region-demo:v1.0.0" \
-  -auto-approve
-```
-
 ## Project Structure
-├── app/                    # Go application
-│   ├── main.go            # HTTP server
-│   ├── Dockerfile         # Container image
-│   └── go.mod             # Dependencies
-├── terraform/             # Infrastructure as Code
-│   ├── main.tf           # Main configuration
-│   ├── variables.tf      # Input variables
-│   ├── outputs.tf        # Output values
-│   └── versions.tf       # Provider versions
-└── README.md             # This file
+![Project Structure](results/Project.png)
+
+## Docker Build & Deployment
+Docker Image Built Successfully
+![Docker Images](results/image.png)
+Container Running with Health Checks
+![Health Checks](results/health.png)
+Service Health Check Response
+![Service checks](results/service.png.png)
