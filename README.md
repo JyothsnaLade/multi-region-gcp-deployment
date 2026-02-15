@@ -110,4 +110,4 @@ Docker Image Built Successfully
 Container Running with Health Checks
 ![Health Checks](results/health.png)
 Service Health Check Response
-![Service checks](results/service.png.png)
+![Service checks](results/service.png)
